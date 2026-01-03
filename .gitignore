@@ -1,1 +1,51 @@
 .devdirectory
+
+# --- Python bytecode / caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+
+# --- Virtual environments ---
+venv/
+.venv/
+ENV/
+env/
+.env/
+.env.*
+
+# --- Packaging / build artifacts ---
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# --- Test / coverage ---
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.nox/
+.tox/
+
+# --- Logs / local runtime files ---
+*.log
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+
+# VS Code (keep user/workspace settings if you want by un-ignoring below)
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
