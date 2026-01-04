@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Optional
 
 @dataclass
 class Signal:
@@ -7,6 +8,7 @@ class Signal:
     polarity: float
     strength: float
     source_id: str
-    source_trust: float
     timestamp: datetime
+    source_trust: Optional[float] = None
+    signal_id: Optional[str] = None
     
