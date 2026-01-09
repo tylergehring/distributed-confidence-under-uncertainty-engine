@@ -1,9 +1,16 @@
-from datetime import timedelta
-from dcue_engine.core.decay.decay_function import exponential_decay
+from core.decay.decay_function import exponential_decay
 
-def test_decay():
-    v = 1.0
-    elapsed = 60  # seconds
-    half_life = 60
-    decayed = exponential_decay(v, elapsed, half_life)
-    assert 0.49 < decayed < 0.51
+import unittest
+
+
+class TestDecay(unittest.TestCase):
+    def test_decay(self):
+        v = 1.0
+        elapsed = 60  # seconds
+        half_life = 60
+        decayed = exponential_decay(v, elapsed, half_life)
+        self.assertTrue(0.49 < decayed < 0.51)
+
+
+if __name__ == "__main__":
+    unittest.main()
